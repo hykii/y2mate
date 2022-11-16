@@ -78,7 +78,7 @@ exports.y2mate = class y2mate {
         if(convert["status"] == "success") {
             return convert["result"].split("<div class=\"form-group has-success has-feedback\">")[1].split("<a href=\"")[1].split("\" rel=")[0];
         }else{
-            throw new Error(ajax["status"]);
+            throw new Error(convert["status"]);
         }
     }
 }
